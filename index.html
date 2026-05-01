@@ -17,15 +17,20 @@
     }
 
     .terminal {
-  background: #000;
-  padding: 0;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 900px;
-  box-shadow: 0 0 20px rgba(0,255,156,0.2);
-  border: 1px solid #1f2937;
-  overflow: hidden;
-}
+      background: #000;
+      padding: 0; /* remove padding so header fits nicely */
+      border-radius: 10px;
+      width: 90%;
+      max-width: 900px;
+    
+      /* 🔥 Border + subtle glow */
+      border: 1px solid #1f2937;
+      box-shadow:
+        0 0 20px rgba(0,255,156,0.15),
+        0 0 2px rgba(0,255,156,0.3);
+    
+      overflow: hidden; /* keeps rounded corners clean */
+    }
 
     .line {
       white-space: pre;
@@ -63,9 +68,31 @@
       0%, 50%, 100% { opacity: 1; }
       25%, 75% { opacity: 0; }
     }
-box-shadow: 
-  0 0 20px rgba(0,255,156,0.15),
-  0 0 2px rgba(0,255,156,0.3);
+    box-shadow: 
+      0 0 20px rgba(0,255,156,0.15),
+      0 0 2px rgba(0,255,156,0.3);
+    .top-bar {
+      background: #111827;
+      padding: 10px;
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid #1f2937;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .red { background: #ef4444; }
+    .yellow { background: #f59e0b; }
+    .green { background: #22c55e; }
+    
+    .content {
+      padding: 20px;
+    }
+    border: 1px solid rgba(0,255,156,0.2);
   </style>
 </head>
 <body>
@@ -77,7 +104,7 @@ box-shadow:
   <span class="dot yellow"></span>
   <span class="dot green"></span>
 </div>
-<div style="padding: 20px;">
+<div class="content">
   <div class="line"><span class="prompt">jc-arhuarica@www ~ $</span> hdfs dfs -ls /user/jc</div>
   <div class="line">Found 6 items</div>
 
