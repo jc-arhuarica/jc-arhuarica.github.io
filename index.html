@@ -10,10 +10,11 @@
     background: #0b0f14;
     color: #00ff9c;
     font-family: "Courier New", monospace;
+  
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* 👈 change this */
+    padding: 20px;           /* 👈 add this */
   }
 
   .terminal {
@@ -29,7 +30,9 @@
       0 0 20px rgba(0,255,156,0.15),
       0 0 2px rgba(0,255,156,0.3);
 
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .top-bar {
@@ -81,6 +84,10 @@
   @keyframes blink {
     0%, 50%, 100% { opacity: 1; }
     25%, 75% { opacity: 0; }
+  }
+  .content {
+    padding: 20px;
+    min-width: 700px;
   }
 </style>
 </head>
