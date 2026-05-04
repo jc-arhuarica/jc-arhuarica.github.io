@@ -2,35 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | jc-arhuarica</title>
-  <style>
-    body {
-      background: #0b0f14;
-      color: #00ff9c;
-      font-family: "Courier New", monospace;
-      padding: 40px;
-    }
-  </style>
+
+<style>
+  body {
+    margin: 0;
+    background: #0b0f14;
+    color: #00ff9c;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .terminal {
+    background: #000;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid rgba(0,255,156,0.2);
+    box-shadow:
+      0 0 20px rgba(0,255,156,0.15),
+      0 0 2px rgba(0,255,156,0.3);
+  }
+
+  .top-bar {
+    background: #111827;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .red { background: #ef4444; }
+  .yellow { background: #f59e0b; }
+  .green { background: #22c55e; }
+
+  .content {
+    padding: 20px;
+  }
+
+  .line {
+    white-space: pre-wrap; /* 👈 important for paragraphs */
+  }
+
+  a {
+    color: #00ff9c;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .prompt {
+    color: #38bdf8;
+  }
+</style>
 </head>
 <body>
 
-<p>jc-arhuarica@www ~ $ hdfs dfs -cat /user/jc/about.txt</p>
+<div class="terminal">
 
-<p>
+  <div class="top-bar">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+  </div>
+
+  <div class="content">
+    <div class="line">
+<span class="prompt">jc-arhuarica@www ~ $</span> hdfs dfs -cat /user/jc/about.txt
+    </div>
+
+    <br>
+
+    <div class="line">
 Data Engineer specialized in Snowflake, dbt, and building scalable data pipelines.
 Focused on performance optimization and real-time data processing.
-</p>
+    </div>
 
-<p>
+    <br>
+
+    <div class="line">
 Skills:
 - Snowflake
 - dbt
 - SQL
 - Python
 - Cloud (AWS/GCP)
-</p>
+    </div>
 
-<p><a href="/">← back</a></p>
+    <br>
+
+    <div class="line"><span class="prompt">jc-arhuarica@www ~ $</span> <span id="cursor">█</span></div>
+
+    <div class="line">
+→ <a href="/">back</a>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
